@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sensors",
+  "info": {
+    "singularName": "sensor",
+    "pluralName": "sensors",
+    "displayName": "Sensor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "sensorvalues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sensorvalue.sensorvalue",
+      "mappedBy": "sensor"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

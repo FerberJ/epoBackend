@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sensorvalues",
+  "info": {
+    "singularName": "sensorvalue",
+    "pluralName": "sensorvalues",
+    "displayName": "Sensorvalue"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "sensor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sensor.sensor",
+      "inversedBy": "sensorvalues"
+    }
+  }
+}
